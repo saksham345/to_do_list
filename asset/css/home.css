@@ -1,0 +1,282 @@
+body
+{
+    background-color: turquoise;
+}
+/* ---------------------------for the container --------------------------------------------*/
+#todo-container
+{
+    position: absolute;
+    left: 35%;
+    /* text-align: center; */
+    width: 450px;
+    height: 850px;
+    border: 1px solid yellow;
+    background-color: cornsilk;
+    border-top-left-radius:0.5cm ;
+    border-top-right-radius: 0.5cm;
+    overflow: hidden;
+    
+}
+
+/*--------------------------- for the header -----------------------------------------------*/
+
+#todo-header
+{
+    height: 230px;
+    /* border: 1px solid red; */
+    overflow: hidden;
+
+}
+#header
+{
+    /* border: 1px solid green; */
+
+    font-family: sans-serif;
+    color: rgb(253, 246, 246);
+    font-size: 1.5rem;
+    position: absolute;
+    top:180px;
+    left: 10px;
+
+}
+
+/* Refresh icon */
+#refresh
+{
+    color: white;
+    position: absolute;
+    top:20px;
+    right: 20px;
+    /* width: 40px; */
+}
+
+
+/* -------------------------------End of header------------------------------------------ */
+/*--------------------------------Input section------------------------------------------ */
+#input
+{
+    /* border: 1px solid black; */
+    /* border-top: 1px solid grey; */
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    width: 450px;
+    position: absolute;
+    bottom: 0px;
+    height: 118px;
+}
+#input select
+{
+    position: absolute;
+    bottom: 0px;
+    height: 68px;
+    width: 225px;
+    /* font-style: italic; */
+    font-family: sans-serif;
+    font-size: 1.1rem;
+}
+#input h1
+{
+    display: inline-block;
+    position: relative;
+    bottom: 15px;
+}
+
+/* style for due date */
+#date
+{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 220px;
+    height: 64px;
+    font-size: 1.1rem;
+    
+
+}
+#input button
+{
+    position: absolute;
+    /* bottom: 0px; */
+    right: 0px;
+    width: 95px;
+    height: 50px;
+    text-align: middle;
+    color: white;
+    background-color: grey;
+}
+
+/* styles for the description of the tods */
+#des
+{
+
+    width: 350px;
+    position: absolute;
+    top:1px;
+    left: 0px;
+    height: 47px;
+    outline: none; 
+    font-size: 1.3rem;
+    border:none;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+    border-bottom: 1px solid grey;
+    /* border-top-left-radius: 0.5cm; */
+    /* border-bottom-left-radius: 0.5cm; */
+    
+    /* border-top-right-radius: 0.5cm; */
+    /* border-bottom-right-radius: 0.5cm; */
+
+}
+#input input::placeholder
+{
+    color: lightskyblue;
+    opacity: 0.8;
+}
+
+#input i
+{
+
+    color: green;
+}
+/* ---------------------------------End of input section----------------------------------- */
+/*--------------------------------- To do List view----------------------------------- */
+
+
+#view-container
+{
+    overflow-y: auto;
+    /* overflow-y: hidden; */
+    /* border: 1px solid green; */
+    height: 400px;
+}
+
+
+.works
+{
+    border-bottom: 1px solid grey;
+    height: 60px;
+    position: relative;
+    /* border-right: 1px solid red; */
+    
+}
+
+
+.style
+{
+    position: absolute;
+    left: 40px;
+    top:15px;
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    font-weight: lighter;
+    /* border: 1px solid green; */
+}
+
+/* For the category part */
+
+.category
+{
+   position: absolute;
+   top:10px;
+   left: 300px;
+   /* border: 1px solid black; */
+   padding: 10px;
+   color: white;
+   background-color: maroon;
+   font-family: sans-serif;
+}
+
+
+.due
+{
+    position: absolute;
+    top:40px;
+    left: 40px;
+    color: grey;
+    font-size: 0.7rem;;
+}
+
+
+.delete
+{
+    color: red;
+    position: absolute;
+    right: 10px;
+    top:20px;
+}
+
+
+#delete-all
+{
+    color: white;
+}
+
+
+.complete
+{
+    position: absolute;
+    top:15px;
+    left: 5px;
+}
+
+/* -------------------------------------End of view section----------------------------------- */
+/* -------------------------------------responsive designs----------------------------------- */
+
+@media only screen and (max-width:1080px)
+{
+    #todo-container
+{
+    position: absolute;
+    left: 25%;
+    /* text-align: center; */
+    width: 450px;
+    height: 750px;
+    /* border: 1px solid yellow; */
+    background-color: cornsilk;
+    border-top-left-radius:0.5cm ;
+    border-top-right-radius: 0.5cm;
+    overflow: hidden;
+    
+}
+
+}
+
+@media only screen and (max-width:700px)
+{
+    #todo-container
+{
+    position: absolute;
+    left: 10%;
+    /* text-align: center; */
+    width: 450px;
+    height: 750px;
+    /* border: 1px solid yellow; */
+    background-color: cornsilk;
+    border-top-left-radius:0.5cm ;
+    border-top-right-radius: 0.5cm;
+    overflow: hidden;
+    
+}
+
+}
+
+@media only screen and (max-width:500px)
+{
+    #todo-container
+{
+    position: absolute;
+    left: 0%;
+    top:0%;
+    /* text-align: center; */
+    width: 450px;
+    height: 100vh;
+    /* border: 1px solid yellow; */
+    background-color: cornsilk;
+    border-radius: 0cm;
+    /* border-top-left-radius:0.5cm ;
+    border-top-right-radius: 0.5cm; */
+    overflow: hidden;
+    
+}
+
+}

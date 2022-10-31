@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/ae87392b1d.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <link rel="stylesheet" href="/css/home.css">
+    <title>Home</title>
+</head>
+<body>
+  <!-- ----------------------------------This is the header -------------------------------------->
+      <div id="todo-container">
+        
+        <div id="todo-header">
+
+            <img src="/images/wall.jpg" width="450px" >
+            <!-- for deleting all the to dos -->
+            <a href="">
+                  <h1>
+                      <a id="delete-all" href="/delete"  onclick="return confirm('Are you sure you have completed all task');">
+                    
+                        <i id="refresh" class="fas fa-sync"></i>
+
+                      </a>
+                  </h1>
+            </a>
+        </div>
+        <!-------------------------------- This is the view section ------------------------------>
+        <div id="view-container">
+
+            <% for(let c of list){ %>
+                <div class="works" >
+                    <input class="complete" type="checkbox" value="false" onchange="print('<%= c.content %>')" >
+                    <span class="style"><%= c.content %></span>
+                    <div class="category"><%= c.category %></div>
+                    <div class="due">
+                      <i class="fas fa-calendar-alt"></i>
+                      <span >Due date <%= c.date %></span>
+                    </div>
+                    <a class="delete" href="/check/?id=<%= c._id %>" onclick="False()">
+                      
+                      <i class="fas fa-trash"></i>
+                    </a>
+                </div>
+            
+            <% } %>
+        </div>
+
+        <!-- -------------------------------This is the input section ---------------------------->
+        <div id="input">
+            
+            <!-- <h1>
+                <button>
+                    <i class="fas fa-plus-circle"></i>
+               </button>              
+            </h1>           -->
+            <form action="/form" method="post">
+                    
+              <input id="des" type="text" name="content" placeholder="Add To do" required>
+              <button>
+                <i class="fas fa-plus"></i>
+                ADD 
+              </button>
+              <select name="category">
+                <option>Choose a category</option>
+                <option>Work</option>
+                <option>Personal</option>
+                <option>Study</option>
+                <option>Other</option>
+              </select>
+
+              <input id="date" name="date" type="date"> 
+              
+            </form>
+
+        </div>
+      </div>
+    
+     
+    <script type="text/javascript" src="/js/home.js"></script>
+</body>
+</html>
